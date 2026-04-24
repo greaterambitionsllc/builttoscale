@@ -1,4 +1,5 @@
 # scaleready
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -819,7 +820,7 @@
   <!-- SECTION 1: Strategy Alignment -->
   <div class="section-page active" id="section-0">
     <div class="section-eyebrow">Pillar 1 · Strategy Alignment</div>
-    <h2 class="section-title">Strategic Clarity & Direction</h2>
+    <h2 class="section-title">Strategic Clarity<br>& Direction</h2>
     <p class="section-desc">Rate each statement based on your organization's current reality — not aspiration. 1 = Strongly disagree, 5 = Strongly agree.</p>
 
     <div class="question-block">
@@ -885,7 +886,7 @@
   <!-- SECTION 2: Execution Systems -->
   <div class="section-page" id="section-1">
     <div class="section-eyebrow">Pillar 2 · Execution Systems</div>
-    <h2 class="section-title">Operational Infrastructure</h2>
+    <h2 class="section-title">Operational<br>Infrastructure</h2>
     <p class="section-desc">How well are the systems and processes that power your day-to-day execution actually working at your current growth stage?</p>
 
     <div class="question-block">
@@ -954,7 +955,7 @@
   <!-- SECTION 3: Portfolio & Program Management -->
   <div class="section-page" id="section-2">
     <div class="section-eyebrow">Pillar 3 · Portfolio & Program Management</div>
-    <h2 class="section-title">Project Portfolio Control</h2>
+    <h2 class="section-title">Project Portfolio<br>Control</h2>
     <p class="section-desc">How effectively does your organization manage the full portfolio of work in flight — from strategic initiatives to day-to-day projects?</p>
 
     <div class="question-block">
@@ -1023,7 +1024,7 @@
   <!-- SECTION 4: Talent & Teams -->
   <div class="section-page" id="section-3">
     <div class="section-eyebrow">Pillar 4 · Talent & Team Design</div>
-    <h2 class="section-title">People & Organizational Design</h2>
+    <h2 class="section-title">People &<br>Organizational Design</h2>
     <p class="section-desc">Growth exposes talent and structure gaps faster than anything else. How well is your organization designed for where you're going?</p>
 
     <div class="question-block">
@@ -1092,7 +1093,7 @@
   <!-- SECTION 5: Leadership -->
   <div class="section-page" id="section-4">
     <div class="section-eyebrow">Pillar 5 · Leadership Capacity</div>
-    <h2 class="section-title">Leadership at Scale</h2>
+    <h2 class="section-title">Leadership at<br>Scale</h2>
     <p class="section-desc">The most overlooked execution gap: leadership that hasn't scaled with the organization. This pillar examines whether your leadership infrastructure can carry the company to the next level.</p>
 
     <div class="question-block">
@@ -1251,7 +1252,7 @@
       <h3 class="cta-title" id="cta-title">Turn This Diagnostic Into a Roadmap</h3>
       <p class="cta-desc" id="cta-desc">The gaps identified here are exactly what the SCALEREADY Execution Architecture™ workshop is designed to close. Let's build your implementation plan together.</p>
       <div class="cta-actions">
-        <button class="btn-cta-primary" onclick="alert('Schedule a SCALEREADY Strategy Session with Dr. Jaye — contact via LinkedIn or greaterambitionsllc.com')">
+        <button class="btn-cta-primary" onclick="alert('Schedule a SCALEREADY Strategy Session with Dr. Jaye — contact via LinkedIn or scaleready.com')">
           Book a Strategy Session
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -1263,7 +1264,7 @@
   </div>
 
   <div class="results-footer">
-    SCALEREADY™ · Execution Architecture for Hypergrowth Companies · Greater Ambitions LLC
+    SCALEREADY™ · Execution Architecture for Hypergrowth Companies · Dr. Jaye, DBA
   </div>
 </div>
 
@@ -1767,6 +1768,29 @@ function retakeDiagnostic() {
   document.getElementById('cover').style.display = 'flex';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
+
+function getInsight(pillar, score) {
+  const insights = {
+    "Strategy Alignment": `Your strategy isn't landing at the execution layer. There's likely a gap between what leadership intends and what teams are actually prioritizing. Without alignment infrastructure, growth adds friction, not momentum.`,
+    "Execution Systems": `Your operational infrastructure isn't built for your current scale. Processes that worked at half your size are now creating drag — workarounds, rework, and single points of failure are signs this pillar needs urgent attention.`,
+    "Portfolio Management": `Your organization is likely over-committed and under-visible. Too many initiatives, unclear ownership, and chronic project delays are symptoms of a portfolio management gap that compounds at every growth stage.`,
+    "Talent & Team Design": `Your organizational structure and talent systems aren't keeping pace with growth. Key-person dependency, slow onboarding, and unclear accountability are creating invisible drag on your execution velocity.`,
+    "Leadership Capacity": `Your leadership infrastructure is the bottleneck. As the organization grows, leaders must multiply capacity — not just work harder. Gaps here create cascading execution failures across every other pillar.`,
+  };
+  return insights[pillar] || "This pillar requires focused development as you scale.";
+}
+
+function getStrength(pillar) {
+  const strengths = {
+    "Strategy Alignment": "You have meaningful strategic clarity at the leadership level. This is a genuine differentiator — build on it by connecting your strategy more tightly to execution at the team level.",
+    "Execution Systems": "Your operational systems are a relative strength. Protect this advantage as you scale by investing in documentation and process infrastructure before the next growth phase.",
+    "Portfolio Management": "Your portfolio management capability is ahead of many organizations at your stage. This gives you better visibility into where to invest and where to pull back.",
+    "Talent & Team Design": "Your organizational design and talent systems show real strength. Continue investing in deliberate structure and accountability to sustain this as headcount grows.",
+    "Leadership Capacity": "Your leadership team is a genuine asset. Continue developing the layer below senior leadership to ensure execution strength compounds as the organization scales.",
+  };
+  return strengths[pillar] || "This pillar represents a genuine organizational strength — protect and leverage it.";
+}
+
 </script>
 </body>
 </html>
