@@ -1545,9 +1545,8 @@ ${report}`;
         access_key: 'e8f9c565-7687-453b-acc7-2d3fdea5bc6d',
         subject: subject,
         from_name: 'SCALEREADY Diagnostic Tool',
-        email: 'info@greaterambitionsllc.com',
-        message: plainText,
         replyto: email !== '[Not provided]' ? email : 'noreply@greaterambitionsllc.com',
+        message: plainText,
       })
     });
   } catch(e) {
