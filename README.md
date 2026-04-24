@@ -793,7 +793,7 @@
       <span class="cover-time">8–10 minutes · 5 pillars · Immediate results</span>
     </div>
   </div>
-  <div class="cover-brand">Dr. Jaye · SCALEREADY™</div>
+  <div class="cover-brand">Greater Ambitions LLC · SCALEREADY™</div>
   <div class="cover-bar"></div>
 </div>
 
@@ -819,7 +819,7 @@
   <!-- SECTION 1: Strategy Alignment -->
   <div class="section-page active" id="section-0">
     <div class="section-eyebrow">Pillar 1 · Strategy Alignment</div>
-    <h2 class="section-title">Strategic Clarity<br>& Direction</h2>
+    <h2 class="section-title">Strategic Clarity & Direction</h2>
     <p class="section-desc">Rate each statement based on your organization's current reality — not aspiration. 1 = Strongly disagree, 5 = Strongly agree.</p>
 
     <div class="question-block">
@@ -885,7 +885,7 @@
   <!-- SECTION 2: Execution Systems -->
   <div class="section-page" id="section-1">
     <div class="section-eyebrow">Pillar 2 · Execution Systems</div>
-    <h2 class="section-title">Operational<br>Infrastructure</h2>
+    <h2 class="section-title">Operational Infrastructure</h2>
     <p class="section-desc">How well are the systems and processes that power your day-to-day execution actually working at your current growth stage?</p>
 
     <div class="question-block">
@@ -954,7 +954,7 @@
   <!-- SECTION 3: Portfolio & Program Management -->
   <div class="section-page" id="section-2">
     <div class="section-eyebrow">Pillar 3 · Portfolio & Program Management</div>
-    <h2 class="section-title">Project Portfolio<br>Control</h2>
+    <h2 class="section-title">Project Portfolio Control</h2>
     <p class="section-desc">How effectively does your organization manage the full portfolio of work in flight — from strategic initiatives to day-to-day projects?</p>
 
     <div class="question-block">
@@ -1023,7 +1023,7 @@
   <!-- SECTION 4: Talent & Teams -->
   <div class="section-page" id="section-3">
     <div class="section-eyebrow">Pillar 4 · Talent & Team Design</div>
-    <h2 class="section-title">People &<br>Organizational Design</h2>
+    <h2 class="section-title">People & Organizational Design</h2>
     <p class="section-desc">Growth exposes talent and structure gaps faster than anything else. How well is your organization designed for where you're going?</p>
 
     <div class="question-block">
@@ -1092,7 +1092,7 @@
   <!-- SECTION 5: Leadership -->
   <div class="section-page" id="section-4">
     <div class="section-eyebrow">Pillar 5 · Leadership Capacity</div>
-    <h2 class="section-title">Leadership at<br>Scale</h2>
+    <h2 class="section-title">Leadership at Scale</h2>
     <p class="section-desc">The most overlooked execution gap: leadership that hasn't scaled with the organization. This pillar examines whether your leadership infrastructure can carry the company to the next level.</p>
 
     <div class="question-block">
@@ -1145,18 +1145,58 @@
       </div>
     </div>
 
-    <div class="incomplete-warning" id="warn-4">Please answer all questions before calculating your results.</div>
+    <div class="incomplete-warning" id="warn-4">Please answer all questions before continuing.</div>
     <div class="section-nav">
       <button class="btn-nav btn-back" onclick="prevSection(4)">
         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         Back
       </button>
-      <button class="btn-nav btn-submit" onclick="calculateResults()">
-        Calculate My Results
+      <button class="btn-nav btn-next" onclick="goToInfoCapture()">
+        See My Results
         <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </button>
     </div>
   </div>
+
+  <!-- INFO CAPTURE SCREEN -->
+  <div class="section-page" id="section-info">
+    <div class="section-eyebrow">Almost There</div>
+    <h2 class="section-title">Where Should We<br>Send Your Report?</h2>
+    <p class="section-desc">Enter your information below to receive your personalized Execution Gap Report. Your results are ready — we just need to know where to send them.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:8px;">
+      <div>
+        <label style="font-family:'Syne',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-3); display:block; margin-bottom:8px;">Full Name <span style="color:var(--red-zone);">*</span></label>
+        <input type="text" id="resp-name" placeholder="Jane Smith" style="width:100%; font-family:'DM Sans',sans-serif; padding:14px 16px; border:1.5px solid var(--paper-3); border-radius:var(--radius-lg); background:var(--paper-2); font-size:14px; color:var(--ink); outline:none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-3)'">
+      </div>
+      <div>
+        <label style="font-family:'Syne',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-3); display:block; margin-bottom:8px;">Email Address <span style="color:var(--red-zone);">*</span></label>
+        <input type="email" id="resp-email" placeholder="jane@company.com" style="width:100%; font-family:'DM Sans',sans-serif; padding:14px 16px; border:1.5px solid var(--paper-3); border-radius:var(--radius-lg); background:var(--paper-2); font-size:14px; color:var(--ink); outline:none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-3)'">
+      </div>
+      <div>
+        <label style="font-family:'Syne',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-3); display:block; margin-bottom:8px;">Title / Role</label>
+        <input type="text" id="resp-title" placeholder="COO, VP of Operations, etc." style="width:100%; font-family:'DM Sans',sans-serif; padding:14px 16px; border:1.5px solid var(--paper-3); border-radius:var(--radius-lg); background:var(--paper-2); font-size:14px; color:var(--ink); outline:none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-3)'">
+      </div>
+      <div>
+        <label style="font-family:'Syne',sans-serif; font-size:11px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--ink-3); display:block; margin-bottom:8px;">Company Name</label>
+        <input type="text" id="resp-company" placeholder="Acme Corp" style="width:100%; font-family:'DM Sans',sans-serif; padding:14px 16px; border:1.5px solid var(--paper-3); border-radius:var(--radius-lg); background:var(--paper-2); font-size:14px; color:var(--ink); outline:none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-3)'">
+      </div>
+    </div>
+
+    <div class="incomplete-warning show" id="warn-info" style="display:none !important;">Please enter your name and email address to continue.</div>
+
+    <div class="section-nav">
+      <button class="btn-nav btn-back" onclick="backFromInfo()">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back
+      </button>
+      <button class="btn-nav btn-submit" onclick="calculateResults()">
+        View My Results
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </div>
+
 </div>
 
 <!-- ═══════════════════════════════ RESULTS ═══════════════════════════════ -->
@@ -1188,14 +1228,7 @@
     <!-- ═══ RESULTS EXPORT ═══ -->
     <div class="export-section" style="margin-top:48px; margin-bottom:48px;">
       <div class="findings-title">Save & Share Your Results</div>
-      <p style="font-size:14px; color:var(--ink-3); margin-bottom:20px; line-height:1.6;">Enter your information below so your results can be identified and synthesized with your team's responses. Then use the export buttons to capture your full diagnostic report.</p>
-      
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:20px;">
-        <input type="text" id="resp-name" placeholder="Your Full Name" style="font-family:'DM Sans',sans-serif; padding:14px 16px; border:1.5px solid var(--paper-3); border-radius:var(--radius-lg); background:var(--paper-2); font-size:14px; color:var(--ink); outline:none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-3)'">
-        <input type="text" id="resp-title" placeholder="Your Title / Role" style="font-family:'DM Sans',sans-serif; padding:14px 16px; border:1.5px solid var(--paper-3); border-radius:var(--radius-lg); background:var(--paper-2); font-size:14px; color:var(--ink); outline:none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-3)'">
-        <input type="text" id="resp-company" placeholder="Company Name" style="font-family:'DM Sans',sans-serif; padding:14px 16px; border:1.5px solid var(--paper-3); border-radius:var(--radius-lg); background:var(--paper-2); font-size:14px; color:var(--ink); outline:none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-3)'">
-        <input type="email" id="resp-email" placeholder="Email Address" style="font-family:'DM Sans',sans-serif; padding:14px 16px; border:1.5px solid var(--paper-3); border-radius:var(--radius-lg); background:var(--paper-2); font-size:14px; color:var(--ink); outline:none; transition: border-color 0.2s;" onfocus="this.style.borderColor='var(--teal)'" onblur="this.style.borderColor='var(--paper-3)'">
-      </div>
+      <div id="respondent-summary" style="background:var(--paper-2); border:1px solid var(--paper-3); border-radius:var(--radius-lg); padding:16px 20px; margin-bottom:20px; font-size:14px; color:var(--ink-2); line-height:1.8;"></div>
 
       <div style="display:flex; gap:12px; flex-wrap:wrap;">
         <button onclick="copyResultsToClipboard()" class="btn-nav btn-next" style="background:var(--teal);">
@@ -1218,7 +1251,7 @@
       <h3 class="cta-title" id="cta-title">Turn This Diagnostic Into a Roadmap</h3>
       <p class="cta-desc" id="cta-desc">The gaps identified here are exactly what the SCALEREADY Execution Architecture™ workshop is designed to close. Let's build your implementation plan together.</p>
       <div class="cta-actions">
-        <button class="btn-cta-primary" onclick="alert('Schedule a SCALEREADY Strategy Session with Dr. Jaye — contact via LinkedIn or scaleready.com')">
+        <button class="btn-cta-primary" onclick="alert('Schedule a SCALEREADY Strategy Session with Dr. Jaye — contact via LinkedIn or greaterambitionsllc.com')">
           Book a Strategy Session
           <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
@@ -1230,7 +1263,7 @@
   </div>
 
   <div class="results-footer">
-    SCALEREADY™ · Execution Architecture for Hypergrowth Companies · Dr. Jaye, DBA
+    SCALEREADY™ · Execution Architecture for Hypergrowth Companies · Greater Ambitions LLC
   </div>
 </div>
 
@@ -1317,18 +1350,52 @@ function getStatus(score, max) {
   return 'strong';
 }
 
-function calculateResults() {
+function goToInfoCapture() {
   const warn = document.getElementById('warn-4');
   if (!sectionAnswered(4)) {
     warn.classList.add('show');
     return;
   }
+  warn.classList.remove('show');
+  document.getElementById('section-4').classList.remove('active');
+  document.getElementById('section-info').classList.add('active');
+  document.getElementById('progressBar').style.width = '100%';
+  document.getElementById('stepCounter').textContent = 'Final Step';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function backFromInfo() {
+  document.getElementById('section-info').classList.remove('active');
+  document.getElementById('section-4').classList.add('active');
+  updateProgress(4);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function calculateResults() {
+  const name = document.getElementById('resp-name').value.trim();
+  const email = document.getElementById('resp-email').value.trim();
+  const warnInfo = document.getElementById('warn-info');
+
+  if (!name || !email) {
+    warnInfo.style.display = 'block';
+    warnInfo.style.setProperty('display', 'block', 'important');
+    return;
+  }
+  warnInfo.style.setProperty('display', 'none', 'important');
 
   document.getElementById('diagnostic').style.display = 'none';
   document.getElementById('results').style.display = 'block';
   window.scrollTo({ top: 0, behavior: 'smooth' });
 
   const total = answers.reduce((s, v) => s + (v || 0), 0);
+
+  // Populate respondent summary in results
+  const title = document.getElementById('resp-title').value.trim();
+  const company = document.getElementById('resp-company').value.trim();
+  const summaryEl = document.getElementById('respondent-summary');
+  if (summaryEl) {
+    summaryEl.innerHTML = `<strong>${name}</strong>${title ? ' &nbsp;·&nbsp; ' + title : ''}${company ? ' &nbsp;·&nbsp; ' + company : ''} &nbsp;·&nbsp; ${email}`;
+  }
 
   // Auto-send full report to admin on completion
   sendAdminEmail();
@@ -1444,112 +1511,48 @@ async function sendAdminEmail() {
   else if (total <= 93) zone = "Developing — Scale Risk Present";
   else zone = "Strong — Optimize for Scale";
 
-  const subject = `SCALEREADY™ Diagnostic Completed — ${name} · ${company} · ${total}/125 (${zone})`;
+  const subject = `SCALEREADY Diagnostic — ${name} | ${company} | ${total}/125 (${zone})`;
 
-  // Build HTML version of report for email body
-  let pillarRows = '';
+  let pillarLines = '';
   PILLARS.forEach((p, i) => {
     const score = getPillarScore(i);
     const pct = Math.round((score / 25) * 100);
     const status = getStatus(score, 25);
-    const statusLabel = status === 'critical' ? '⚠ CRITICAL' : status === 'developing' ? '◎ DEVELOPING' : '✓ STRONG';
-    pillarRows += `<tr><td style="padding:8px 12px; border-bottom:1px solid #eee;">${p.name}</td><td style="padding:8px 12px; border-bottom:1px solid #eee; text-align:center;">${score}/25</td><td style="padding:8px 12px; border-bottom:1px solid #eee; text-align:center;">${pct}%</td><td style="padding:8px 12px; border-bottom:1px solid #eee; font-weight:600;">${statusLabel}</td></tr>`;
+    const statusLabel = status === 'critical' ? 'CRITICAL' : status === 'developing' ? 'DEVELOPING' : 'STRONG';
+    pillarLines += `${p.name}: ${score}/25 (${pct}%) [${statusLabel}]\n`;
   });
 
-  const htmlBody = `
-    <div style="font-family: Arial, sans-serif; max-width: 700px; margin: 0 auto; color: #333;">
-      <div style="background:#52211A; padding:24px 32px; border-radius:8px 8px 0 0;">
-        <h1 style="color:#B8860B; font-size:18px; margin:0; letter-spacing:0.1em;">SCALEREADY™ DIAGNOSTIC COMPLETED</h1>
-        <p style="color:rgba(255,255,255,0.6); margin:6px 0 0; font-size:13px;">New assessment submission — Dr. Jaye notification</p>
-      </div>
-      <div style="background:#fff; border:1px solid #ddd; border-top:none; padding:32px; border-radius:0 0 8px 8px;">
-        <h2 style="color:#52211A; font-size:16px; margin:0 0 20px;">Respondent Information</h2>
-        <table style="width:100%; border-collapse:collapse; margin-bottom:28px; background:#f9f9f7; border-radius:6px; overflow:hidden;">
-          <tr><td style="padding:10px 14px; font-weight:600; width:140px; border-bottom:1px solid #eee;">Name</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">${name}</td></tr>
-          <tr><td style="padding:10px 14px; font-weight:600; border-bottom:1px solid #eee;">Title</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">${title}</td></tr>
-          <tr><td style="padding:10px 14px; font-weight:600; border-bottom:1px solid #eee;">Company</td><td style="padding:10px 14px; border-bottom:1px solid #eee;">${company}</td></tr>
-          <tr><td style="padding:10px 14px; font-weight:600;">Email</td><td style="padding:10px 14px;">${email}</td></tr>
-        </table>
+  const plainText = `SCALEREADY™ DIAGNOSTIC — NEW SUBMISSION
+==========================================
+Name:    ${name}
+Title:   ${title}
+Company: ${company}
+Email:   ${email}
 
-        <h2 style="color:#52211A; font-size:16px; margin:0 0 8px;">Overall Score</h2>
-        <div style="background:#52211A; color:#fff; padding:16px 20px; border-radius:6px; margin-bottom:28px; display:flex; align-items:center; gap:16px;">
-          <span style="font-size:36px; font-weight:800; color:#B8860B;">${total}</span>
-          <div>
-            <div style="font-size:12px; color:rgba(255,255,255,0.5); text-transform:uppercase; letter-spacing:0.1em;">out of 125</div>
-            <div style="font-size:16px; font-weight:700; color:#D4A820; margin-top:4px;">${zone}</div>
-          </div>
-        </div>
+OVERALL SCORE: ${total}/125 — ${zone}
 
-        <h2 style="color:#52211A; font-size:16px; margin:0 0 12px;">Pillar Breakdown</h2>
-        <table style="width:100%; border-collapse:collapse; margin-bottom:28px; font-size:14px;">
-          <thead>
-            <tr style="background:#f0ece6;">
-              <th style="padding:10px 12px; text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9A7A72;">Pillar</th>
-              <th style="padding:10px 12px; text-align:center; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9A7A72;">Score</th>
-              <th style="padding:10px 12px; text-align:center; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9A7A72;">%</th>
-              <th style="padding:10px 12px; text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#9A7A72;">Status</th>
-            </tr>
-          </thead>
-          <tbody>${pillarRows}</tbody>
-        </table>
-
-        <h2 style="color:#52211A; font-size:16px; margin:0 0 12px;">Full Question-Level Detail</h2>
-        <pre style="background:#f9f9f7; border:1px solid #e4e1d8; border-radius:6px; padding:20px; font-size:11px; line-height:1.7; overflow:auto; white-space:pre-wrap; font-family:'Courier New', monospace;">${report}</pre>
-
-        <div style="margin-top:24px; padding:16px 20px; background:#E4F2E8; border-left:3px solid #1A5C30; border-radius:4px; font-size:13px; color:#1A5C30;">
-          This report was automatically generated by the SCALEREADY™ Execution Gap Diagnostic and sent to info@greaterambitionsllc.com upon assessment completion.
-        </div>
-      </div>
-    </div>
-  `;
+PILLAR BREAKDOWN:
+${pillarLines}
+------------------------------------------
+FULL QUESTION-LEVEL REPORT:
+${report}`;
 
   try {
     await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({
-        access_key: '8e2be0a1-1883-4eaf-910d-a8dae3c0a218',
+        access_key: 'e8f9c565-7687-453b-acc7-2d3fdea5bc6d',
         subject: subject,
-        from_name: 'SCALEREADY™ Diagnostic Tool',
-        to: 'info@greaterambitionsllc.com',
-        html: htmlBody,
-        replyto: email !== '[Not provided]' ? email : 'noreply@scaleready.com',
+        from_name: 'SCALEREADY Diagnostic Tool',
+        email: 'info@greaterambitionsllc.com',
+        message: plainText,
+        replyto: email !== '[Not provided]' ? email : 'noreply@greaterambitionsllc.com',
       })
     });
   } catch(e) {
-    // Silent fail — do not interrupt user experience
     console.warn('Admin email notification could not be sent:', e);
   }
-}
-
-function getInsight(pillar, score) {
-  const insights = {
-    "Strategy Alignment": `Your strategy isn't landing at the execution layer. There's likely a gap between what leadership intends and what teams are actually prioritizing. Without alignment infrastructure, growth adds friction, not momentum.`,
-    "Execution Systems": `Your operational infrastructure isn't built for your current scale. Processes that worked at half your size are now creating drag — workarounds, rework, and single points of failure are signs this pillar needs urgent attention.`,
-    "Portfolio Management": `Your organization is likely over-committed and under-visible. Too many initiatives, unclear ownership, and chronic project delays are symptoms of a portfolio management gap that compounds at every growth stage.`,
-    "Talent & Team Design": `Your organizational structure and talent systems aren't keeping pace with growth. Key-person dependency, slow onboarding, and unclear accountability are creating invisible drag on your execution velocity.`,
-    "Leadership Capacity": `Your leadership infrastructure is the bottleneck. As the organization grows, leaders must multiply capacity — not just work harder. Gaps here create cascading execution failures across every other pillar.`,
-  };
-  return insights[pillar] || "This pillar requires focused development as you scale.";
-}
-
-function getStrength(pillar) {
-  const strengths = {
-    "Strategy Alignment": "You have meaningful strategic clarity at the leadership level. This is a genuine differentiator — build on it by connecting your strategy more tightly to execution at the team level.",
-    "Execution Systems": "Your operational systems are a relative strength. Protect this advantage as you scale by investing in documentation and process infrastructure before the next growth phase.",
-    "Portfolio Management": "Your portfolio management capability is ahead of many organizations at your stage. This gives you better visibility into where to invest and where to pull back.",
-    "Talent & Team Design": "Your organizational design and talent systems show real strength. Continue investing in deliberate structure and accountability to sustain this as headcount grows.",
-    "Leadership Capacity": "Your leadership team is a genuine asset. Continue developing the layer below senior leadership to ensure execution strength compounds as the organization scales.",
-  };
-  return strengths[pillar] || "This pillar represents a genuine organizational strength — protect and leverage it.";
-}
-
-function retakeDiagnostic() {
-  answers.fill(null);
-  document.querySelectorAll('.scale-btn').forEach(b => b.classList.remove('selected'));
-  document.getElementById('results').style.display = 'none';
-  document.getElementById('cover').style.display = 'flex';
-  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // ═══════════════════════════════════════
@@ -1649,7 +1652,7 @@ function buildResultsText() {
 
   report += `\n${'═'.repeat(60)}\n`;
   report += `Generated by SCALEREADY™ Execution Gap Diagnostic\n`;
-  report += `Dr. Jaye, DBA · Greater Ambitions LLC\n`;
+  report += `Dr. Minina Johnson, DBA, PMP · Greater Ambitions LLC\n`;
   report += `${'═'.repeat(60)}\n`;
 
   return report;
@@ -1744,6 +1747,26 @@ function emailResults() {
   const body = `SCALEREADY Execution Gap Diagnostic Results%0D%0A%0D%0ARespondent: ${encodeURIComponent(name)}%0D%0ACompany: ${encodeURIComponent(company)}%0D%0AOverall Score: ${total}/125 — ${encodeURIComponent(zone)}%0D%0A%0D%0APILLAR SCORES:%0D%0A${pillarSummary}%0D%0A(Use "Copy Full Report to Clipboard" for the complete question-level detail, then paste below or attach as a document.)%0D%0A%0D%0A----%0D%0AGenerated by SCALEREADY™ Execution Gap Diagnostic`;
 
   window.location.href = `mailto:?subject=${subject}&body=${body}`;
+}
+
+function retakeDiagnostic() {
+  answers.fill(null);
+  document.querySelectorAll('.scale-btn').forEach(b => b.classList.remove('selected'));
+  // Reset info fields
+  ['resp-name','resp-title','resp-company','resp-email'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+  // Reset info screen back to hidden
+  document.getElementById('section-info').classList.remove('active');
+  // Reset all sections
+  for (let i = 0; i < 5; i++) {
+    document.getElementById('section-' + i).classList.remove('active');
+  }
+  document.getElementById('section-0').classList.add('active');
+  document.getElementById('results').style.display = 'none';
+  document.getElementById('cover').style.display = 'flex';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 </script>
 </body>
