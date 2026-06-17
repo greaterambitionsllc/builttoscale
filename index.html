@@ -1666,7 +1666,7 @@ async function sendAdminEmail() {
   else if (total <= 93) zone = "Developing — Scale Risk Present";
   else zone = "Strong — Optimize for Scale";
 
-  const subject = `BuiltToScale™ Diagnostic — ${name} | ${company} | ${total}/125 (${zone})`;
+  const subject = `Greater Ambitions LLC - BuiltToScale™ Diagnostic — ${name} | ${company} | ${total}/125 (${zone})`;
 
   let pillarLines = '';
   PILLARS.forEach((p, i) => {
@@ -1677,7 +1677,7 @@ async function sendAdminEmail() {
     pillarLines += `${p.name}: ${score}/25 (${pct}%) [${statusLabel}]\n`;
   });
 
-  const plainText = `BUILTTOSCALE™ DIAGNOSTIC — NEW SUBMISSION
+  const plainText = `BUILTTOSCALE™ EXECUTION GAP DIAGNOSTIC — NEW SUBMISSION
 ==========================================
 Name:    ${name}
 Title:   ${title}
@@ -1699,7 +1699,7 @@ ${report}`;
       body: JSON.stringify({
         access_key: 'e8f9c565-7687-453b-acc7-2d3fdea5bc6d',
         subject: subject,
-        from_name: 'BuiltToScale™ Diagnostic Tool',
+        from_name: 'Greater Ambitions LLC - BuiltToScale™ Diagnostic Tool',
         replyto: email !== '[Not provided]' ? email : 'noreply@greaterambitionsllc.com',
         message: plainText,
       })
